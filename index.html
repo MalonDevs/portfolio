@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marlon F. Florendo Jr. — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <!-- ══ NAV ══ -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="logo">Marlon<span class="dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"      class="nav-a active">Home</a></li>
+        <li><a href="#about"     class="nav-a">About</a></li>
+        <li><a href="#portfolio" class="nav-a">Portfolio</a></li>
+        <li><a href="#contact"   class="nav-a">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home"      class="mob-a" onclick="closeMob()">Home</a>
+      <a href="#about"     class="mob-a" onclick="closeMob()">About</a>
+      <a href="#portfolio" class="mob-a" onclick="closeMob()">Portfolio</a>
+      <a href="#contact"   class="mob-a" onclick="closeMob()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section id="home" class="hero">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="badge reveal">
+          <span class="pulse-dot"></span> AVAILABLE FOR WORK
+        </div>
+
+        <h1 class="hero-h1 reveal r1">
+          <span class="muted">Hi, I'm</span><br>
+          <span class="name-glow">Marlon F. Florendo Jr.</span>
+        </h1>
+
+        <p class="tagline reveal r2">
+          Aspiring Web Dev &amp; Data Analyst<span class="cursor-blink">|</span>
+        </p>
+
+        <p class="hero-desc reveal r3">
+          Crafting pixel-perfect, responsive, and interactive digital experiences.
+          I turn ideas into elegant code that users love.
+        </p>
+
+        <div class="socials reveal r4">
+          <a href="https://www.facebook.com/M3lon111" class="soc-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/_malonss" class="soc-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-ctas reveal r5">
+          <a href="#portfolio" class="btn-primary">View My Work</a>
+          <a href="#contact"   class="btn-outline">Contact Me</a>
+        </div>
+      </div>
+
+      <!-- Right: Code Card -->
+      <div class="hero-card reveal r3">
+        <div class="code-card">
+          <div class="code-bar">
+            <span class="cb r"></span><span class="cb y"></span><span class="cb g"></span>
+            <span class="cb-title">welcome.js</span>
+          </div>
+          <pre class="code-body"><span class="c-comment">// Hello World 👋</span>
+<span class="c-kw">const</span> <span class="c-var">developer</span> = {
+  <span class="c-key">name</span>: <span class="c-str">"Marlon"</span>,
+  <span class="c-key">role</span>: <span class="c-str">"Data Analyst"</span>,
+  <span class="c-key">passion</span>: <span class="c-str">"Databases"</span>,
+  <span class="c-key">coffee</span>: <span class="c-bool">true</span>,
+  <span class="c-key">skills</span>: [
+    <span class="c-str">"HTML"</span>, <span class="c-str">"CSS"</span>,
+    <span class="c-str">"JavaScript"</span>,
+    <span class="c-str">"PHP"</span>, <span class="c-str">"SQL"</span>
+  ]
+};
+
+<span class="c-kw">export default</span> developer;</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>SCROLL</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-label reveal">GET TO KNOW ME</div>
+      <h2 class="section-title reveal r1">About Me</h2>
+
+      <div class="about-grid">
+        <!-- Photo column -->
+        <div class="about-photo-wrap reveal r1">
+          <div class="photo-frame">
+            <img
+              src="assets/gradpic.png"
+              alt="Marlon F. Florendo Jr."
+              class="profile-img"
+              id="profilePhoto"
+              onerror="this.style.display='none';document.getElementById('photoPlaceholder').style.display='flex';"
+            >
+            <div id="photoPlaceholder" class="photo-placeholder" style="display:none;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              <span>Profile Photo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="about-text">
+          <p class="reveal r2">
+            I'm a passionate front-end web developer and aspiring data analyst with a keen eye for design and a love for creating seamless user experiences. I build responsive, accessible, and performant web applications that make a real impact.
+          </p>
+          <p class="reveal r3" style="margin-top:1rem;">
+            When I'm not coding, you'll find me exploring new design trends, contributing to open-source projects, or sharing knowledge with the dev community. I believe great software starts with empathy for the user.
+          </p>
+
+          <div class="stats reveal r4">
+            <div class="stat-box">
+              <span class="stat-num">1</span>
+              <span class="stat-lbl">Year Exp.</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">1</span>
+              <span class="stat-lbl">Project</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">10+</span>
+              <span class="stat-lbl">Certificates</span>
+            </div>
+          </div>
+
+          <div class="skills-pills reveal r5">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">PHP</span>
+            <span class="pill">SQL</span>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ PORTFOLIO ══ -->
+  <section id="portfolio">
+    <div class="section-inner">
+      <div class="section-label reveal">MY WORK</div>
+      <h2 class="section-title reveal r1">Portfolio</h2>
+
+      <div class="tabs reveal r2">
+        <button class="tab active" onclick="switchTab('projects',this)">Projects</button>
+        <button class="tab"        onclick="switchTab('certificates',this)">Certificates</button>
+        <button class="tab"        onclick="switchTab('techstack',this)">Tech Stack</button>
+      </div>
+
+      <!-- PROJECTS -->
+      <div id="pane-projects" class="tab-pane active">
+        <div class="cards-grid" id="projectsGrid"></div>
+      </div>
+
+      <!-- CERTIFICATES -->
+      <div id="pane-certificates" class="tab-pane">
+        <div class="cards-grid" id="certsGrid"></div>
+      </div>
+
+      <!-- TECH STACK -->
+      <div id="pane-techstack" class="tab-pane">
+        <div class="tech-grid" id="techGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact">
+    <div class="section-inner contact-inner">
+      <div class="section-label reveal" style="text-align:center;">SAY HELLO</div>
+      <h2 class="section-title reveal r1" style="text-align:center;">Get In Touch</h2>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal r2">
+          <p class="contact-sub">Have a project in mind or just want to chat? Feel free to reach out. I'm always open to new opportunities and collaborations.</p>
+          <div class="contact-items">
+            <div class="c-item">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <p class="c-label">Email</p>
+                <p class="c-val">florendojr1106@gmail.com</p>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p class="c-label">Location</p>
+                <p class="c-val">Philippines 🇵🇭</p>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <p class="c-label">Availability</p>
+                <p class="c-val available">Open for freelance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal r3" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="field">
+            <label for="fName">Name</label>
+            <input type="text" id="fName" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="fEmail">Email</label>
+            <input type="email" id="fEmail" placeholder="your@email.com" required>
+          </div>
+          <div class="field">
+            <label for="fMsg">Message</label>
+            <textarea id="fMsg" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full" id="submitBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 <strong>Marlon F. Florendo Jr.</strong> — Crafted with ❤️ and lots of ☕</p>
+  </footer>
+
+  <!-- ══ MODAL ══ -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModalDirect()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
