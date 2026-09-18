@@ -308,21 +308,82 @@ function showToast(msg, isError = false) {
 }
 
 // ── CONTACT FORM ──────────────────────────────────────────────────────────────
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
+
+  const form = e.target;
   const btn = document.getElementById('submitBtn');
+
+  const name = document.getElementById('fName').value.trim();
+  const email = document.getElementById('fEmail').value.trim();
+  const message = document.getElementById('fMsg').value.trim();
+
+  if (!name || !email || !message) {
+    showToast('Please complete all fields.', true);
+    return;
+  }
+
   btn.disabled = true;
   btn.textContent = 'Sending...';
-  setTimeout(() => {
-    showToast("Message sent! I'll get back to you soon. 🎉");
-    e.target.reset();
+
+  const formData = new FormData();
+
+  formData.append('name', name);
+  formData.append('email', email);
+  formData.append('message', message);
+  formData.append(
+    '_subject',
+    'New Portfolio Contact — Marlon Florendo Jr.'
+  );
+
+  try {
+    const response = await fetch(
+      'https://formspree.io/f/mppwwyne',
+      {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }
+    );
+
+    if (response.ok) {
+      showToast("Message sent! I'll get back to you soon. 🎉");
+      form.reset();
+    } else {
+      showToast(
+        'Something went wrong. Please try again.',
+        true
+      );
+    }
+
+  } catch (error) {
+    showToast(
+      'Unable to send the message. Please try again.',
+      true
+    );
+
+  } finally {
+
     btn.disabled = false;
+
     btn.innerHTML = `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;">
-        <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      <svg viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="2"
+           style="width:16px;height:16px;">
+
+        <line x1="22" y1="2" x2="11" y2="13"/>
+
+        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+
       </svg>
-      Send Message`;
-  }, 1200);
+
+      Send Message
+    `;
+  }
 }
 
 // ── COLOR HELPERS ─────────────────────────────────────────────────────────────
