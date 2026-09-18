@@ -89,12 +89,11 @@ const CERTS = [
 
 // ── TECH STACK ────────────────────────────────────────────────────────────────
 const TECH_STACK = [
-  { name: 'HTML',      color: '#f97316' },
-  { name: 'CSS',       color: '#38bdf8' },
-  { name: 'JavaScript', color: '#fbbf24' },
-  { name: 'PHP',        color: '#a78bfa' },
-  { name: 'SQL',        color: '#34d399' },
-  { name: 'Git',        color: '#f87171' },
+  { name: 'EXCEL',      color: '#34d399' },
+  { name: 'POWERBI',       color: '#f87171' },
+  { name: 'PYTHON',    color: '#fbbf24' },
+  { name: 'SQL',        color: '#a78bfa' },
+ 
 ];
 
 // ── NAV ───────────────────────────────────────────────────────────────────────
