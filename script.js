@@ -18,7 +18,8 @@ const PROJECTS = [
     emoji:    '🛒',
     gradient: 'linear-gradient(135deg,#312e81,#1e1b4b)',
     liveUrl:  'https://oncallph.com/',
-    image:    'assets/LandingPage.png'   
+    image:    'assets/LandingPage.png',
+    type:     'website'
   },
 
 ];
@@ -223,8 +224,12 @@ function techSVGPath(name) {
 }
 
 // ── PROJECT MODAL ─────────────────────────────────────────────────────────────
+// type: 'website'    = keep the existing Live Demo / View Code modal (OnCall)
+// type: 'case-study' = show a View Information button for future data projects
 function viewProject(i) {
   const p = PROJECTS[i];
+  const isCaseStudy = p.type === 'case-study';
+
   setModal(`
     ${p.image
       ? `<img class="modal-img" src="${p.image}" alt="${p.title}"
@@ -241,10 +246,65 @@ function viewProject(i) {
     </div>
     <p class="modal-desc">${p.desc}</p>
     <div class="modal-links">
-      <a href="${p.liveUrl || '#'}" target="_blank" class="btn-primary">🔗 Live Demo</a>
-      <a href="${p.codeUrl || '#'}" target="_blank" class="btn-outline">💻 View Code</a>
+      ${isCaseStudy
+        ? `<button type="button" class="btn-primary" onclick="viewProjectInfo(${i})">📄 View Information</button>`
+        : `<a href="${p.liveUrl || '#'}" target="_blank" rel="noopener noreferrer" class="btn-primary">🔗 Live Demo</a>
+           <a href="${p.codeUrl || '#'}" target="_blank" rel="noopener noreferrer" class="btn-outline">💻 View Code</a>`}
     </div>
   `);
+}
+
+// ── PROJECT DOCUMENTATION / CASE STUDY ─────────────────────────────────────────
+function viewProjectInfo(i) {
+  const p = PROJECTS[i];
+  const d = p.documentation || {};
+
+  const section = (title, content, icon = '•') => {
+    if (!content) return '';
+    return `
+      <section class="doc-section">
+        <h3 class="doc-title"><span class="doc-icon">${icon}</span>${title}</h3>
+        <div class="doc-content">${content}</div>
+      </section>`;
+  };
+
+  const list = items => Array.isArray(items)
+    ? `<ul>${items.map(item => `<li>${item}</li>`).join('')}</ul>`
+    : (items || '');
+
+  setModal(`
+    <div class="doc-header">
+      <div>
+        <div class="section-label" style="margin-bottom:.35rem;">PROJECT CASE STUDY</div>
+        <h2 class="modal-h2">${p.title}</h2>
+        <div class="tags">
+          ${p.tags.map((t, ti) => `<span class="tag" style="background:${hexA(p.tagColors[ti]||'#818cf8')};color:${p.tagColors[ti]||'#818cf8'};">${t}</span>`).join('')}
+        </div>
+      </div>
+    </div>
+
+    ${section('1. Project Overview', d.overview, '01')}
+    ${section('2. Problem / Business Question', d.problem, '02')}
+    ${section('3. Objective', d.objective, '03')}
+    ${section('4. Data Source', d.dataSource, '04')}
+    ${section('5. Data Cleaning & Preparation', d.dataCleaning, '05')}
+    ${section('6. Analysis & Transformation', d.analysis, '06')}
+    ${section('7. Dashboard / Visualization', d.visualization, '07')}
+    ${section('8. Key Insights', d.insights, '08')}
+    ${section('9. Findings', d.findings, '09')}
+    ${section('10. Recommendations', d.recommendations, '10')}
+    ${section('11. Tools & Technologies', d.tools, '11')}
+    ${section('12. Conclusion', d.conclusion, '12')}
+
+    <div class="doc-footer-note">
+      <span>📌</span>
+      <span>This project documentation is presented as an end-to-end case study, from data preparation through analysis and recommendations.</span>
+    </div>
+
+    <div class="modal-links doc-actions">
+      <button type="button" class="btn-outline" onclick="viewProject(${i})">← Back to Project</button>
+    </div>
+  `, true);
 }
 
 // ── CERTIFICATE MODAL ─────────────────────────────────────────────────────────
@@ -284,8 +344,9 @@ function viewCert(i) {
 const overlay   = document.getElementById('modalOverlay');
 const modalBody = document.getElementById('modalBody');
 
-function setModal(html) {
+function setModal(html, wide = false) {
   modalBody.innerHTML = html;
+  document.querySelector('.modal-box').classList.toggle('modal-wide', wide);
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
