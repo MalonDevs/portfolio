@@ -24,6 +24,21 @@ const PROJECTS = [
 
 ];
 
+const PROJECTS = [
+  {
+    title:    'OnCall Platform',
+    desc:     'A HYBRID PLATFORM FOR SORSOGONs JOB SEEKERS AND EMPLOYERS',
+    tags:     ['PHP', 'CSS', 'HTML'],
+    tagColors:['#818cf8', '#34d399', '#fbbf24'],
+    emoji:    '🛒',
+    gradient: 'linear-gradient(135deg,#312e81,#1e1b4b)',
+    liveUrl:  'https://oncallph.com/',
+    image:    'assets/LandingPage.png',
+    type:     'website'
+  },
+
+];
+
 // ── CERTIFICATES ──────────────────────────────────────────────────────────────
 //  image:  must be .jpg or .png — browsers CANNOT render a PDF as <img>.
 //          Convert your PDF to PNG first, save it in assets/, then set the path.
