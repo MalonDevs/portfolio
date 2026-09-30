@@ -42,7 +42,7 @@ const PROJECTS = [
       emoji:     '𝐇𝐑👩🏻‍💻',
       gradient:  'linear-gradient(135deg,#0B2A5B,#1677FF)',
       pdfUrl:   'assets/HR_Employee_Survey_Responses_Documentation_Template.pdf'
-       }
+       },
 ];
 
 
