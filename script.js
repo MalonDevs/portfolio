@@ -41,6 +41,7 @@ const PROJECTS = [
       tagColors:  ['#34d399'],
       emoji:     '𝐇𝐑👩🏻‍💻',
       gradient:  'linear-gradient(135deg,#0B2A5B,#1677FF)',
+      type:     'case-study',
       pdfUrl:   'assets/HR_Employee_Survey_Responses_Documentation_Template.pdf'
        },
 ];
