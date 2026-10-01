@@ -44,6 +44,17 @@ const PROJECTS = [
       type:     'case-study',
       pdfUrl:   'assets/HR_Employee_Survey_Responses_Documentation_Template.pdf'
        },
+
+      {
+      title:    'SALES DASHBAORD',
+      desc:      'BREAKDOWN OR OVERVEW OF SALES',
+      tags:      ['PYTHON','SQL','POWERBI'],
+      tagColors:  ['#fbbf24','#a78bfa','#f87171'],
+      emoji:     '𝐇𝐑👩🏻‍💻',
+      gradient:  'linear-gradient(135deg,#0B2A5B,#1677FF)',
+      type:     'case-study',
+      pdfUrl:   'assets/HR_Employee_Survey_Responses_Documentation_Template.pdf'
+       },
 ];
 
 
