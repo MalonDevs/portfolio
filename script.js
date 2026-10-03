@@ -29,7 +29,7 @@ const PROJECTS = [
     tagColors:['#34d399', '#f87171', '#60a5fa'],
     emoji:    '📊',
     gradient: 'linear-gradient(135deg,#0B2A5B,#1677FF)',
-    image:    'assets/hr-survey-overview.png',
+    image:    'assets/HR_SURVEY.png',
     type:     'case-study',
     pdfUrl:   'assets/HR_Employee_Survey_Responses_Documentation_Template.pdf'
   },
