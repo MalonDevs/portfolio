@@ -35,12 +35,13 @@ const PROJECTS = [
   },
 
    {
-      title:    'HR OVERVIEW',
+      title:    'HR ATTRITION OVERVIEW',
       desc:      'HR PROBLEM ABOUT THE EMPLOYEE ATTRITION',
       tags:      ['EXCEL'],
       tagColors:  ['#34d399'],
       emoji:     '𝐇𝐑👩🏻‍💻',
       gradient:  'linear-gradient(135deg,#0B2A5B,#1677FF)',
+      image:     'assets/HR_ATTRITION.png',
       type:     'case-study',
       pdfUrl:   'assets/HR_Employee_Survey_Responses_Documentation_Template.pdf'
        },
@@ -52,6 +53,7 @@ const PROJECTS = [
       tagColors:  ['#fbbf24','#a78bfa','#f87171'],
       emoji:     '𝐇𝐑👩🏻‍💻',
       gradient:  'linear-gradient(135deg,#0B2A5B,#1677FF)',
+      image:     'assets/SALES_DASHBOARD.png',
       type:     'case-study',
       pdfUrl:   'assets/HR_Employee_Survey_Responses_Documentation_Template.pdf'
        },
