@@ -43,7 +43,7 @@ const PROJECTS = [
       gradient:  'linear-gradient(135deg,#0B2A5B,#1677FF)',
       image:     'assets/HR_ATTRITION.png',
       type:     'case-study',
-      pdfUrl:   'assets/HR Employee Attrition Analytics Dashboard Documentation(2).pdf'
+      pdfUrl:   'assets/HR Employee Attrition Analytics Dashboard Documentation (2).pdf'
        },
 
       {
@@ -55,7 +55,7 @@ const PROJECTS = [
       gradient:  'linear-gradient(135deg,#0B2A5B,#1677FF)',
       image:     'assets/SALES_DASHBOARD.png',
       type:     'case-study',
-      pdfUrl:   'assets/Sales Performance Dashboard Documentation(2).pdf'
+      pdfUrl:   'assets/Sales Performance Dashboard Documentation (2).pdf'
        },
 ];
 
